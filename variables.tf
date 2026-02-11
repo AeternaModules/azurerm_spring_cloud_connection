@@ -24,7 +24,7 @@ EOT
     name               = string
     spring_cloud_id    = string
     target_resource_id = string
-    client_type        = optional(string, "none")
+    client_type        = optional(string) # Default: "none"
     vnet_solution      = optional(string)
     authentication = object({
       certificate     = optional(string)
