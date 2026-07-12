@@ -1,3 +1,7 @@
+output "spring_cloud_connections_id" {
+  description = "Map of id values across all spring_cloud_connections, keyed the same as var.spring_cloud_connections"
+  value       = { for k, v in azurerm_spring_cloud_connection.spring_cloud_connections : k => v.id }
+}
 output "spring_cloud_connections_authentication" {
   description = "Map of authentication values across all spring_cloud_connections, keyed the same as var.spring_cloud_connections"
   value       = { for k, v in azurerm_spring_cloud_connection.spring_cloud_connections : k => v.authentication }
